@@ -103,6 +103,8 @@ enum grub_install_plat
     GRUB_INSTALL_PLATFORM_I386_XEN_PVH,
     GRUB_INSTALL_PLATFORM_ARM64_EFI,
     GRUB_INSTALL_PLATFORM_ARM_COREBOOT,
+    GRUB_INSTALL_PLATFORM_RISCV32_EFI,
+    GRUB_INSTALL_PLATFORM_RISCV64_EFI,
     GRUB_INSTALL_PLATFORM_MAX
   };
 
@@ -207,6 +209,9 @@ grub_util_get_target_dirname (const struct grub_install_image_target_desc *t);
 
 void
 grub_install_create_envblk_file (const char *name);
+
+const char *
+grub_install_get_default_arm_platform (void);
 
 const char *
 grub_install_get_default_x86_platform (void);
